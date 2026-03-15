@@ -1,0 +1,46 @@
+[
+  {
+    "version": 1,
+    "timestamp": "2026-03-15T04:04:32.103429",
+    "f1_new": 0.4986,
+    "f1_old": 0.4986,
+    "deployed": true
+  },
+  {
+    "version": 2,
+    "timestamp": "2026-03-15T04:56:02.340055",
+    "f1_new": 0.4986,
+    "f1_old": 0.4986,
+    "deployed": true
+  },
+  {
+    "version": 3,
+    "timestamp": "2026-03-15T05:27:11.953578",
+    "f1_new": 0.4986,
+    "f1_old": 0.4986,
+    "deployed": true
+  },
+  {
+    "version": 4,
+    "timestamp": "2026-03-15T05:28:27.354205",
+    "f1_new": 0.4986,
+    "f1_old": 0.4986,
+    "deployed": true
+  },
+  {
+    "version": 5,
+    "timestamp": "2026-03-15T05:41:01.376268",
+    "f1_new": 0.5556,
+    "f1_old": 0.4358,
+    "deployed": true,
+    "new_cases_used": 53
+  },
+  {
+    "version": 6,
+    "timestamp": "2026-03-15T05:44:28.920836",
+    "f1_new": 0.5556,
+    "f1_old": 0.5556,
+    "deployed": true,
+    "new_cases_used": 53
+  }
+]

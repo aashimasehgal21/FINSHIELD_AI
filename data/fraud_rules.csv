@@ -1,0 +1,165 @@
+rule_id,fraud_type,rule,risk_score_range,explanation
+FR-001,Card Fraud,Transaction amount exceeds 3x user average spending,0.80-0.95,Large deviation from normal spending pattern
+FR-002,Card Fraud,Transaction amount exceeds historical maximum,0.75-0.90,Unusual high-value transaction
+FR-003,Card Fraud,Multiple transactions within 1 minute,0.85-0.97,Rapid activity suggests automated fraud
+FR-004,Card Fraud,More than 10 transactions within 10 minutes,0.80-0.94,Possible bot-driven payment attempts
+FR-005,Card Fraud,Multiple declined transactions followed by success,0.75-0.90,Fraudsters test card validity
+FR-006,Card Fraud,Large transaction after several small ones,0.78-0.92,Card testing behavior
+FR-007,Card Fraud,ATM withdrawal followed by online purchase quickly,0.70-0.88,Suspicious transaction combination
+FR-008,Card Fraud,Transaction immediately after card activation,0.65-0.82,Possible stolen card usage
+FR-009,Card Fraud,Repeated purchases from same merchant in seconds,0.75-0.89,Automated payment behavior
+FR-010,Card Fraud,High-value international transaction,0.82-0.96,High-risk cross-border payment
+
+FR-011,Geolocation Fraud,Transaction from new country,0.70-0.88,Location anomaly
+FR-012,Geolocation Fraud,Transaction from new city far from home,0.68-0.84,Possible stolen card
+FR-013,Geolocation Fraud,Two transactions from different countries within minutes,0.90-0.99,Impossible travel scenario
+FR-014,Geolocation Fraud,Transaction from VPN detected IP,0.72-0.90,Anonymized location
+FR-015,Geolocation Fraud,Transaction from TOR network IP,0.80-0.95,Highly suspicious network source
+FR-016,Geolocation Fraud,Login from country never seen before,0.75-0.90,Possible account compromise
+FR-017,Geolocation Fraud,Transaction distance exceeds 1000 km in short time,0.85-0.97,Impossible movement
+FR-018,Geolocation Fraud,Multiple countries used in same session,0.83-0.96,Suspicious access pattern
+FR-019,Geolocation Fraud,Location inconsistent with travel history,0.70-0.85,Behavior anomaly
+FR-020,Geolocation Fraud,High-value purchase from high-risk region,0.82-0.94,Known fraud hotspot
+
+FR-021,Account Takeover,Password change before large transaction,0.88-0.97,Attackers change credentials
+FR-022,Account Takeover,Email address changed before transaction,0.82-0.94,Account takeover indicator
+FR-023,Account Takeover,Security questions modified before payment,0.80-0.92,Account recovery abuse
+FR-024,Account Takeover,Multiple failed login attempts detected,0.78-0.90,Brute force attempt
+FR-025,Account Takeover,Login from unknown device,0.70-0.85,Device anomaly
+FR-026,Account Takeover,Multiple device logins simultaneously,0.82-0.94,Account compromise signal
+FR-027,Account Takeover,Login from new IP address,0.65-0.82,Possible unauthorized access
+FR-028,Account Takeover,Account accessed after long inactivity,0.68-0.85,Account reactivation fraud
+FR-029,Account Takeover,Password reset followed by purchase,0.85-0.95,Takeover pattern
+FR-030,Account Takeover,Account accessed from TOR network,0.82-0.95,Anonymous access attempt
+
+FR-031,Behavioral Fraud,Sudden spike in transaction frequency,0.72-0.88,Behavior anomaly
+FR-032,Behavioral Fraud,New merchant category never used before,0.65-0.80,Behavior deviation
+FR-033,Behavioral Fraud,Unusual transaction time compared to history,0.60-0.78,Temporal anomaly
+FR-034,Behavioral Fraud,High-value purchase at unusual time,0.70-0.88,Suspicious timing
+FR-035,Behavioral Fraud,Sudden increase in daily spending,0.72-0.90,Behavior shift
+FR-036,Behavioral Fraud,User spending outside preferred categories,0.65-0.80,Preference anomaly
+FR-037,Behavioral Fraud,Multiple purchases from unfamiliar merchants,0.70-0.85,Unusual merchant behavior
+FR-038,Behavioral Fraud,Transaction pattern inconsistent with history,0.75-0.90,Strong anomaly
+FR-039,Behavioral Fraud,Sudden high-value electronics purchase,0.70-0.85,Fraudsters target resellable items
+FR-040,Behavioral Fraud,Frequent small purchases in short period,0.68-0.82,Card testing
+
+FR-041,Bot Fraud,Transactions executed at exact intervals,0.80-0.95,Automated script pattern
+FR-042,Bot Fraud,Payment requests from automated user agent,0.75-0.90,Bot activity
+FR-043,Bot Fraud,High request frequency from single IP,0.78-0.92,Automation attempt
+FR-044,Bot Fraud,Multiple accounts accessed from same device,0.82-0.95,Fraud ring behavior
+FR-045,Bot Fraud,Mass account creation detected,0.80-0.94,Bot signup attack
+FR-046,Bot Fraud,Repeated API payment calls detected,0.85-0.96,Automated attack
+FR-047,Bot Fraud,Login attempts from rotating proxies,0.83-0.95,Credential stuffing
+FR-048,Bot Fraud,Transaction bursts detected,0.82-0.93,Automated payment system
+FR-049,Bot Fraud,Unusual browser fingerprint detected,0.75-0.90,Automation tool
+FR-050,Bot Fraud,Script-based checkout attempts,0.80-0.92,Bot purchase attempt
+
+FR-051,Merchant Fraud,Transactions with newly created merchant account,0.70-0.85,Merchant legitimacy uncertain
+FR-052,Merchant Fraud,Merchant flagged in fraud reports,0.80-0.94,High-risk merchant
+FR-053,Merchant Fraud,Multiple refunds requested from same merchant,0.72-0.88,Refund abuse
+FR-054,Merchant Fraud,Transactions linked to blacklisted merchant,0.90-0.99,Confirmed fraud pattern
+FR-055,Merchant Fraud,Merchant with abnormal chargeback rate,0.82-0.94,Suspicious merchant behavior
+FR-056,Merchant Fraud,Merchant located in high-risk jurisdiction,0.75-0.90,Geographic fraud risk
+FR-057,Merchant Fraud,Merchant processing unusual transaction volume,0.78-0.92,Possible laundering
+FR-058,Merchant Fraud,Repeated micro-transactions from same merchant,0.72-0.85,Card testing pattern
+FR-059,Merchant Fraud,Merchant mismatch with purchase type,0.70-0.84,Suspicious billing descriptor
+FR-060,Merchant Fraud,Merchant flagged in fraud intelligence feeds,0.85-0.97,External fraud report
+
+FR-061,Device Fraud,Device fingerprint mismatch,0.70-0.85,Unknown device usage
+FR-062,Device Fraud,Multiple accounts used on same device,0.80-0.92,Fraud ring indicator
+FR-063,Device Fraud,Device using emulator environment,0.78-0.90,Automation attempt
+FR-064,Device Fraud,Device location inconsistent with IP,0.75-0.88,Spoofed device
+FR-065,Device Fraud,Device associated with past fraud,0.90-0.99,Known fraud device
+FR-066,Device Fraud,Multiple cards used on same device,0.82-0.94,Fraudster testing cards
+FR-067,Device Fraud,Device changed immediately before payment,0.72-0.86,Account compromise
+FR-068,Device Fraud,Rooted or jailbroken device detected,0.70-0.85,Security risk
+FR-069,Device Fraud,Unusual browser fingerprint change,0.68-0.82,Device spoofing
+FR-070,Device Fraud,High-risk device reputation score,0.80-0.95,Fraud device detection
+
+FR-071,Network Fraud,Transactions from anonymous proxy,0.80-0.94,IP masking
+FR-072,Network Fraud,IP address linked to fraud blacklist,0.88-0.97,Known fraud IP
+FR-073,Network Fraud,Multiple accounts from same IP,0.78-0.90,Fraud ring
+FR-074,Network Fraud,IP geolocation mismatch with device GPS,0.75-0.88,Spoofing
+FR-075,Network Fraud,High number of requests from same IP,0.72-0.86,Automated activity
+FR-076,Network Fraud,IP associated with malware network,0.85-0.97,High risk source
+FR-077,Network Fraud,IP used in credential stuffing attack,0.82-0.95,Login attack
+FR-078,Network Fraud,Payment attempts from hosting provider IP,0.75-0.90,Datacenter traffic
+FR-079,Network Fraud,Session IP changes mid transaction,0.78-0.92,Session hijacking
+FR-080,Network Fraud,Repeated fraud attempts from same subnet,0.82-0.94,Network cluster fraud
+
+FR-081,Card Fraud,Large purchase after small verification transactions,0.80-0.93,Card testing then fraud
+FR-082,Card Fraud,Multiple ATM withdrawals quickly,0.82-0.95,Card theft pattern
+FR-083,Card Fraud,High-value online electronics purchase,0.75-0.90,Resale fraud
+FR-084,Card Fraud,Transaction exceeds credit limit attempt,0.70-0.85,Fraud testing
+FR-085,Card Fraud,Repeated card verification attempts,0.72-0.86,CVV testing
+FR-086,Card Fraud,Card used in high fraud merchant category,0.80-0.94,Industry risk
+FR-087,Card Fraud,Card used across multiple merchants quickly,0.78-0.90,Testing activity
+FR-088,Card Fraud,Transaction after card reported lost,0.90-0.99,Confirmed compromise
+FR-089,Card Fraud,Multiple declined international payments,0.75-0.88,Fraud attempts
+FR-090,Card Fraud,Transaction at high-risk merchant category,0.80-0.93,Known fraud sector
+
+FR-091,Behavioral Fraud,User suddenly purchases luxury goods,0.70-0.85,Behavior anomaly
+FR-092,Behavioral Fraud,Frequent transactions late night,0.65-0.80,Suspicious timing
+FR-093,Behavioral Fraud,User spending outside home country pattern,0.72-0.88,Travel anomaly
+FR-094,Behavioral Fraud,Unexpected subscription purchase,0.60-0.75,Behavior change
+FR-095,Behavioral Fraud,High purchase frequency spike,0.75-0.90,Behavior shift
+FR-096,Behavioral Fraud,First international transaction,0.70-0.85,New behavior
+FR-097,Behavioral Fraud,Unusual shopping platform usage,0.65-0.80,User deviation
+FR-098,Behavioral Fraud,Spending concentrated within short time,0.72-0.88,Possible fraud burst
+FR-099,Behavioral Fraud,User activity inconsistent with demographics,0.68-0.82,Behavior anomaly
+FR-100,Behavioral Fraud,Sudden purchase of digital goods,0.70-0.85,Common fraud target
+
+FR-101,Money Laundering,Rapid transfer between multiple accounts,0.85-0.97,Layering activity
+FR-102,Money Laundering,Multiple transfers below reporting threshold,0.80-0.94,Structuring behavior
+FR-103,Money Laundering,Frequent international transfers,0.78-0.92,Cross-border laundering
+FR-104,Money Laundering,Funds moved through many accounts quickly,0.85-0.96,Layering stage
+FR-105,Money Laundering,Sudden increase in transfer volume,0.75-0.90,Money movement anomaly
+FR-106,Money Laundering,Transfers between linked suspicious accounts,0.88-0.97,Fraud network
+FR-107,Money Laundering,Round-trip transactions detected,0.82-0.94,Circular transfers
+FR-108,Money Laundering,High-value crypto conversion after deposit,0.80-0.93,Asset laundering
+FR-109,Money Laundering,Multiple micro transfers to new accounts,0.75-0.88,Testing accounts
+FR-110,Money Laundering,Large withdrawal after deposit chain,0.82-0.95,Cash-out stage
+
+FR-111,System Abuse,Multiple promo code redemptions,0.65-0.80,Promotion abuse
+FR-112,System Abuse,Account creation spikes detected,0.70-0.85,Bot signup attack
+FR-113,System Abuse,Referral bonus farming activity,0.68-0.82,Incentive abuse
+FR-114,System Abuse,Same IP used for many accounts,0.75-0.90,Fraud ring indicator
+FR-115,System Abuse,Multiple cards used on single account,0.80-0.92,Payment testing
+FR-116,System Abuse,High refund request frequency,0.72-0.88,Refund fraud
+FR-117,System Abuse,Repeated order cancellation after shipment,0.70-0.85,Fraud attempt
+FR-118,System Abuse,Digital goods purchased repeatedly then refunded,0.75-0.90,Refund abuse
+FR-119,System Abuse,Promo code applied across multiple accounts,0.70-0.85,Abuse pattern
+FR-120,System Abuse,Multiple login resets in short period,0.72-0.88,Account probing
+
+FR-121,Identity Fraud,User identity details recently changed,0.75-0.90,Identity takeover
+FR-122,Identity Fraud,New phone number linked to account,0.70-0.85,Contact takeover
+FR-123,Identity Fraud,Multiple identity updates in short time,0.78-0.92,Suspicious profile changes
+FR-124,Identity Fraud,Account linked to stolen identity reports,0.88-0.97,Known identity theft
+FR-125,Identity Fraud,User name mismatch with payment details,0.72-0.88,Identity anomaly
+FR-126,Identity Fraud,New address added before purchase,0.70-0.85,Shipping fraud
+FR-127,Identity Fraud,Shipping address differs significantly,0.75-0.90,Reshipping fraud
+FR-128,Identity Fraud,Account accessed after identity update,0.78-0.92,Suspicious change
+FR-129,Identity Fraud,Multiple identity verification failures,0.80-0.93,KYC risk
+FR-130,Identity Fraud,Document verification mismatch detected,0.85-0.97,Fake identity
+
+FR-131,Payment Fraud,Payment attempt using multiple cards,0.75-0.90,Card testing
+FR-132,Payment Fraud,Checkout attempts with different CVV values,0.80-0.94,CVV brute force
+FR-133,Payment Fraud,Multiple failed payment authorizations,0.75-0.88,Fraud probing
+FR-134,Payment Fraud,Transaction using expired card data,0.70-0.82,Data breach usage
+FR-135,Payment Fraud,Payment gateway flagged transaction,0.85-0.97,External risk signal
+FR-136,Payment Fraud,Card BIN linked to fraud reports,0.82-0.94,Risky card range
+FR-137,Payment Fraud,Transaction flagged by bank fraud filter,0.88-0.98,High risk
+FR-138,Payment Fraud,Multiple payment retries detected,0.78-0.90,Payment abuse
+FR-139,Payment Fraud,Payment using suspicious prepaid card,0.75-0.88,Fraud tool
+FR-140,Payment Fraud,Transaction through high-risk payment processor,0.80-0.92,External risk factor
+
+FR-141,Advanced Fraud,Transaction matches known fraud pattern cluster,0.88-0.97,ML pattern match
+FR-142,Advanced Fraud,Graph analysis detects fraud ring connection,0.90-0.99,Network fraud detection
+FR-143,Advanced Fraud,User linked to previously flagged accounts,0.85-0.96,Fraud association
+FR-144,Advanced Fraud,Device linked to fraud cluster graph,0.88-0.98,Device network fraud
+FR-145,Advanced Fraud,Account involved in coordinated transaction burst,0.87-0.96,Fraud ring activity
+FR-146,Advanced Fraud,Transaction flagged by anomaly detection model,0.80-0.93,ML anomaly
+FR-147,Advanced Fraud,User linked to high-risk fraud graph node,0.85-0.96,Graph risk detection
+FR-148,Advanced Fraud,Transaction matches historical fraud vector pattern,0.88-0.97,Vector similarity detection
+FR-149,Advanced Fraud,Customer risk profile exceeds threshold,0.82-0.95,Risk scoring system
+FR-150,Advanced Fraud,Multiple fraud indicators triggered simultaneously,0.90-0.99,Composite fraud signal

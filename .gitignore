@@ -1,0 +1,22 @@
+# Environment
+.env
+venv/
+
+# Data (too large for GitHub)
+data/creditcard.csv
+data/creditcard_augmented.csv
+
+# Model files (too large)
+models/xgboost_model.pkl
+models/scaler.pkl
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code
+.vscode/
+
+# Logs
+logs/
