@@ -122,80 +122,7 @@ FinShield_AI/
 ```
 
 ---
-
-## ⚙️ Setup Instructions
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/your-username/FinShield-AI.git
-cd FinShield-AI
-```
-
-### 2. Create virtual environment
-```bash
-python -m venv venv
-venv\Scripts\activate        # Windows
-source venv/bin/activate     # Mac/Linux
-```
-
-### 3. Install dependencies
-```bash
-python -m pip install -r requirements.txt
-```
-
-### 4. Setup environment variables
-Create a `.env` file in the root folder:
-```
-OPENAI_API_KEY=your_openai_api_key
-SUPABASE_URL=your_supabase_url
-SUPABASE_KEY=your_supabase_key
-```
-
-### 5. Download dataset
-Download `creditcard.csv` from [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) and place it in the `data/` folder.
-
-### 6. Augment dataset
-```bash
-python augment_dataset.py
-```
-
-### 7. Train the model
-```bash
-python src/train_model.py
-python save_features.py
-```
-
-### 8. Build vector database
-```bash
-python src/rag/vector_db_builder.py
-```
-
----
-
-## ▶️ Running the System
-
-Open 3 terminals:
-
-**Terminal 1 — Start API server:**
-```bash
-uvicorn app.main:app --reload
-```
-
-**Terminal 2 — Simulate transactions:**
-```bash
-python simulate_stream.py
-```
-
-**Terminal 3 — Launch dashboard:**
-```bash
-python -m streamlit run dashboard.py
-```
-
-Visit `http://localhost:8501` for the dashboard.
-
----
-
-## 📊 Dashboard Features
+## 📊 Features
 
 - **KPI Cards** — Total transactions, High/Medium/Low risk counts, Blocked count
 - **Charts** — Risk distribution, Decision distribution, Risk over time, Fraud probability histogram
@@ -243,7 +170,7 @@ XGBoost selected as final model due to best F1 score on imbalanced fraud dataset
 
 ## 🎓 About
 
-Built as a 4th year student project demonstrating end-to-end MLOps, RAG, and explainable AI in financial fraud detection.
+Built a project demonstrating end-to-end MLOps, RAG, and explainable AI in financial fraud detection.
 
 **Dataset:** [Credit Card Fraud Detection — Kaggle (ULB)](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
 
